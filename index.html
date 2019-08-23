@@ -13,7 +13,17 @@
   <style>
     html,body,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     h1 {padding-left: 10px}
-    img {border-radius: 50%}
+    img {
+      border-radius: 50%;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+    img:hover {
+      border-radius: 50%;
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+      transition: 2s; 
+    }
   </style>
 
   <body class="w3-light-grey">
