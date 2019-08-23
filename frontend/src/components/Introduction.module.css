@@ -1,0 +1,32 @@
+.introduction {
+    height: 200px;
+    width: 100%;
+    /* background: lightgray; */
+    display: flex;
+}
+
+.mypic {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 10px;
+}
+
+.name {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+.designation {
+    font-size: 30px;
+    margin: 0 0 5px 0;
+}
+
+.company {
+    font-size: 20px;
+}
