@@ -20,9 +20,34 @@
         // will fade out the whole DIV that covers the website.
         $("#preloader").delay(300).fadeOut("slow");
 
-      });       
+      });
 
   	})
+
+	  $(document).ready(function() {
+		fetch('https://api.github.com/users/bipni/repos')
+	  	.then(response => response.json())
+		.then(data => {
+			console.log(data.length);
+			document.getElementById("repo").innerHTML = data.length;
+		});
+
+		const startDate = new Date('2017-09-01');
+		const endDate = new Date();
+		endDate.setDate(endDate.getDate() - 15); // subtract 15 days from the end date
+		let hours = 0;
+		let daysCount = 0;
+		while (startDate <= endDate) {
+			const dayOfWeek = startDate.getDay();
+			if (dayOfWeek !== 0 && dayOfWeek !== 6) { // exclude weekends
+				daysCount++;
+			}
+			startDate.setDate(startDate.getDate() + 1); // increment the start date
+		}
+
+		hours = daysCount * 8;
+		document.getElementById("hours").innerHTML =  hours;
+	  });
 
 
   	/*---------------------------------------------------- */
